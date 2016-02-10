@@ -18,7 +18,7 @@
 // bitcoin_classic_node_count: 594,
 if (preg_match('!bitcoin_classic_node_count:\s+(\d+),!', $html, $matches)) {
   // Write out to the sqlite database using scraperwiki library
-  scraperwiki::save_sqlite(array('classic_nodecount'), array('count' => intval($matches[1])));
+  scraperwiki::save_sqlite(array('name'), array('name' => 'classic', 'count' => intval($matches[1])));
 }
 
 
